@@ -15,7 +15,7 @@ public void setup() {
   size(256, 256);
   frameRate(frame_rate);
 
-  //gif_setup(this);
+  gif_setup(this);
 }
 
 void draw() {
