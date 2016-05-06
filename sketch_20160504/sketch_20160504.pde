@@ -30,7 +30,7 @@ void draw() {
     gif_finish();
   }
 
-  float x = tsume_quad(t, 0, width, 1);
+  float x = tsume_in_out_quad(t, 0, width, 1);
   float y = simple_linear_tweening(t, 0, height, 1);
 
   stroke(#000000);
@@ -45,7 +45,7 @@ float simple_linear_tweening(float t, float b, float c, float d) {
   return c * t / d + b;
 }
 
-float tsume_quad(float t, float b, float c, float d) {
+float tsume_in_out_quad(float t, float b, float c, float d) {
   float y = 0.0;
   if (t / d < 0.5) {
     float t0 = (t / d * 2.0);
