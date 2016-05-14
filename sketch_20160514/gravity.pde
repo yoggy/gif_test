@@ -17,7 +17,8 @@ class Gravity {
   float k_p;
   float k_v;
   
-  float pos_now;
+  float p_now;
+  float p_target;
   float v_now;
   
   Gravity(float pos_start, float pos_target, float k_p, float k_v) {
@@ -27,24 +28,27 @@ class Gravity {
     this.k_p = k_p;
     this.k_v = k_v;
     
+    this.p_target = 1;
+    
     reset();
   }
   
   void reset() {
-    pos_now = pos_start;    
+    p_now = 0;   
     v_now = 0;
   }
   
   void step() {
-    float diff = pos_target - pos_now;
+    float diff = p_target - p_now;
     float diff_dir = diff >= 0 ? 1 : -1;
     float a = k_p * diff_dir * pow(diff, 2) - k_v * v_now;
     
     v_now += a;
-    pos_now += v_now;    
+    p_now += v_now;    
   }
   
   float getPosNow() {
-    return pos_now;
+    float diff = pos_target - pos_start;
+    return pos_start + diff * p_now;
   }
 }

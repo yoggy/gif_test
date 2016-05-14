@@ -17,9 +17,9 @@ public void setup() {
   size(256, 256);
   frameRate(frame_rate);
 
-  gravity = new Gravity(0, width*2/3, 0.01, 0.4);
+  gravity = new Gravity(0, width*2/3, 2.0, 0.3);
 
-  gif_setup(this);
+  //gif_setup(this);
 }
 
 void draw() {
