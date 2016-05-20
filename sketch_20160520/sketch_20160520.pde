@@ -32,7 +32,14 @@ void draw() {
     gif_finish();
   }
 
-  float th = map_tame_in_out(t, 1, 0, PI/2, 3);
+  float t_p = 0.5;
+  float th;
+  if (t < t_p) {
+    th = map_tame_in_out(t, t_p, 0, PI/2, 3);
+  }
+  else {
+    th = PI/2;
+  }
 
   stroke(#000000);
 
