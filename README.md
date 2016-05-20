@@ -1,6 +1,7 @@
 gif_test
 ====
 
+![sketch_20160520/sketch_20160520.gif](sketch_20160520/sketch_20160520.gif)
 ![sketch_20160518/sketch_20160518.gif](sketch_20160518/sketch_20160518.gif)
 ![sketch_20160514/sketch_20160514.gif](sketch_20160514/sketch_20160514.gif)
 ![sketch_20160512/sketch_20160512.gif](sketch_20160512/sketch_20160512.gif)
